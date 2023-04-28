@@ -2,8 +2,8 @@ import {useState} from 'react'
 
 export default function Body() {
 
-    const [todo, setTodo] = useState([])
     const [type, setType] = useState()
+    const [todo, setTodo] = useState([])
 
 
     function resultText(e){
@@ -31,8 +31,18 @@ export default function Body() {
   return (
     <div className="body">
         <div className="add-section">
-            <input className='inputSection' type="text" value={type} onChange={(e) => resultText(e)} />
-            <button onClick={() => saveText()}>ADD</button>
+
+            <input placeholder="Insert activity" 
+                   className='inputSection' 
+                   type="text" 
+                   value={type} 
+                   onChange={(e) => resultText(e)} 
+                   required/>
+
+            <button className="add-btn" 
+                    onClick={() => saveText()}
+            >ADD</button>
+
         </div>
         <br/>
         {showResults}
