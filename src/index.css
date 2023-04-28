@@ -28,6 +28,10 @@ a:hover {
   -webkit-tap-highlight-color: transparent;
 }
 
+textarea:focus, input:focus, button:focus{
+  outline: none!important;
+}
+
 body {
   margin: 0;
   display: flex;
