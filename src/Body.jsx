@@ -2,7 +2,7 @@ import {useState} from 'react'
 
 export default function Body() {
 
-    const [type, setType] = useState()
+    const [type, setType] = useState('')
     const [todo, setTodo] = useState([])
 
 
@@ -10,9 +10,16 @@ export default function Body() {
         setType(prevType => prevType = e.target.value)
     }
 
+
+    console.log(type)
+
     function saveText(){
-        setTodo(prevTodo => [...prevTodo, prevTodo = type])
-        setType('')
+        if(type == ''){
+            alert('Insert text into the input section')
+        }else{
+            setTodo(prevTodo => [...prevTodo, prevTodo = type])
+            setType('')
+        }
     }
 
     function deleteTodo(id) {
