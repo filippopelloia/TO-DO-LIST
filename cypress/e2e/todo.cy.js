@@ -33,7 +33,7 @@ describe('todo style', () => {
 
 
 
-  it.only('should write and save two activities and delete only one of them', () => {
+  it('should write and save two activities and delete only one of them', () => {
 
     cy.visit('/');
 
@@ -55,4 +55,19 @@ describe('todo style', () => {
     cy.get(':nth-child(3) > .delete-btn').click();
     cy.get('.result').should('not.have.value', 'Marco');
   })
+
+
+  // it.only('alert error', () => {
+  //   cy.visit('/')
+
+  //   cy.get('.inputSection').should('be.visible');
+  //   cy.get('.add-btn').should('be.visible');
+
+  //   cy.get('.add-btn').click();
+
+  //   cy.on('window.alert', (txt) => {
+  //     expect(txt).to.equal('Insert text into the inpujjjj');
+  //   })
+
+  // })
 })
