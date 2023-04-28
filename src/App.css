@@ -64,6 +64,7 @@
 .inputSection{
   width: 30vh;
   padding-left: 2vh;
+  border-radius: 10px;
 }
 
 .body{
